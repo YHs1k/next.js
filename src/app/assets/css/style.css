@@ -1,0 +1,210 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Jua', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+header {
+  height: 5rem;
+  line-height: 5rem;
+  padding-left: 3rem;
+}
+
+section {
+  min-height: 100vh;
+}
+
+article {
+  min-height: 100vh;
+}
+
+#main {
+  background-image: url(../img/sp_bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 20rem;
+}
+
+#main h2 {
+  font-size: 10rem;
+}
+
+#main h3 {
+  font-weight: 100;
+  font-size: 7rem;
+}
+
+#main .a_button {
+  transition: 0.3s;
+  float: right;
+  text-align: center;
+  width: 20rem;
+  padding: 1rem;
+  border: 10px solid black;
+  background-color: white;
+  border-radius: 5rem;
+  font-weight: 100;
+  font-size: 3rem;
+}
+
+#main .a_button:hover {
+  background-color: gray;
+}
+#profile_pic {
+  background-image: url(../img/profile_pic_bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  width: 50%;
+  display: block;
+  float: left;
+  padding: 10rem;
+  height: 1300px;
+}
+
+#profile_pic img {
+  border-radius: 1%;
+  width: 20rem;
+  height: 20rem;
+}
+
+#profile_desc {
+  color: black;
+  background-image: url(../img/profile_desc_bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 50%;
+  height: 1300px;
+  float: right;
+  padding: 12rem;
+  display: block;
+}
+
+#profile_desc h2 {
+  font-size: 4rem;
+}
+
+#profile_desc h3 {
+  font-weight: 100;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+#profile_desc p {
+  font-size: 1.5rem;
+  padding-bottom: 1rem;
+}
+
+.button_area {
+  padding-right: 200rem;
+}
+
+#profile_desc button {
+  transition: 0.5s;
+  font-size: 1.5rem;
+  text-align: center;
+  width: 25rem;
+  height: 3rem;
+  border-radius: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+#profile_desc button:hover {
+  transition: 0.5s;
+  background-color: gray;
+}
+
+footer {
+  margin-top: 3rem;
+}
+
+img {
+  width: 50%;
+  object-fit: cover;
+}
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+.gallery-item {
+  text-align: center;
+  border-radius: 50%;
+}
+.gallery-item img {
+  max-width: 100%;
+  height: auto;
+}
+header ul li a {
+  color: white;
+}
+.out-box{
+  margin-right: 1%;
+  margin-bottom: 1%;
+  /* 100 - 3 = 97 / 4 = 24.25% */
+  width: 50%;
+  height: 60;
+  padding-bottom: 50%;
+  
+  /* 정원형을 만들기 위해서 너비값과 높이값이 동일해야함 */
+  /* 그러나 너비값이 유동값으로 계산되어 높이값으로 %단위를 넣어주면 그 기준이 모호함 */
+  /* 따라서 유동값으로 높이값을 잡을때는 padding-bottom 사용해서 넣어주면됨(이때 img태그로 이미지 넣었을 경우 height: 0;처리 필수) */
+  border-radius: 50%;
+  overflow: hidden;
+
+  position: relative;
+}
+.out-box:nth-child(4n){
+  margin-right: 0;
+}
+
+/* 면이 하나인 박스와 두개인 박스 모두 선택해서 absolute 지정 */
+.out-box div{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.out-box{
+  /* 입체감 있게 3d 설정해보기 */
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+.rotate-box{
+  transform: rotateY(0);
+}
+.out-box:hover .rotate-box{
+  transform: rotateY(180deg);
+}
+.f-box{
+  transform: rotateY(0);
+  opacity: 1;
+}
+.b-box{
+  transform: rotateY(180deg);
+  opacity: 0;
+}
+.f_b-box:hover .f-box{
+  transform: rotateY(180deg);
+  opacity: 0;
+}
+.f_b-box:hover .b-box{
+  transform: rotateY(0);
+  opacity: 1;
+}
+.out-box div{
+  transition-duration: 0.5s;
+  border-radius: 50%;
+  overflow: hidden;
+}

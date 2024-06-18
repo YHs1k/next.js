@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Jua', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+header {
+  height: 5rem;
+  line-height: 5rem;
+  padding-left: 3rem;
+}
+
+section {
+  min-height: 100vh;
+}
+
+article {
+  min-height: 100vh;
+}
+
+#main {
+  background-image: url(./assets/img/sp_bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 20rem;
+}
+
+#main h2 {
+  font-size: 10rem;
+}
+
+#main h3 {
+  font-weight: 100;
+  font-size: 7rem;
+}
+
+#main .a_button {
+  transition: 0.3s;
+  float: right;
+  text-align: center;
+  width: 20rem;
+  padding: 1rem;
+  border: 10px solid black;
+  background-color: white;
+  border-radius: 5rem;
+  font-weight: 100;
+  font-size: 3rem;
+}
+
+#main .a_button:hover {
+  background-color: gray;
+}
+#profile_pic {
+  background-image: url(./assets/img/profile_pic_bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  width: 50%;
+  display: block;
+  float: left;
+  padding: 10rem;
+  height: 1300px;
+}
+
+#profile_pic img {
+  border-radius: 1%;
+  width: 20rem;
+  height: 20rem;
+}
+
+#profile_desc {
+  color: black;
+  background-image: url(./assets/img//profile_desc_bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 50%;
+  height: 1300px;
+  float: right;
+  padding: 12rem;
+  display: block;
+}
+
+#profile_desc h2 {
+  font-size: 4rem;
+}
+
+#profile_desc h3 {
+  font-weight: 100;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+#profile_desc p {
+  font-size: 1.5rem;
+  padding-bottom: 1rem;
+}
+.button_area {
+  padding-right: 200rem;
+}
+
+#profile_desc button {
+  transition: 0.5s;
+  font-size: 1.5rem;
+  text-align: center;
+  width: 25rem;
+  height: 3rem;
+  border-radius: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+#profile_desc button:hover {
+  transition: 0.5s;
+  background-color: gray;
+}
+
+footer {
+  margin-top: 3rem;
+}
+
+img {
+  width: 50%;
+  object-fit: cover;
+}
